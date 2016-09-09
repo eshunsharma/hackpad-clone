@@ -1,0 +1,85 @@
+body {
+	background-color: #c2e0f9;
+	font-family: 'Montserrat';
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	background-color: #f3f8fc;
+	height: 500px;
+	margin: 20px auto;
+	width: 500px;
+	border-radius: 4px;
+}
+
+#header {
+	border-bottom: 1px solid #cde1ee;
+	color: #61c3f5;
+	font-size: 24px;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+	padding: 20px 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+    word-spacing: 2px;
+}
+
+.main{
+	margin: auto;
+	text-align: center;
+	color: #999;
+	padding: 50px 0;
+}
+
+.main input {
+	width: 50%;
+    margin: auto;
+    height: 24px;
+}
+
+.main #start {
+	width: 50%;
+    margin: 20px auto;
+    padding: 10px 0;
+    background-color: #c2e0f9;
+    color: #666;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main #start:hover {
+	color: #61c3f5;
+}
+
+.wrapper textarea {
+	border: 1px solid #cde1ee;
+	display: block;
+	margin: auto;
+    max-width: 90%;
+    min-height: 250px;
+    padding: 10px;
+    width: 90%;
+    resize: none;
+}
+
+.wrapper textarea:focus {
+    outline: #61c4f6 auto 1px;
+}
+
+#footer {
+	border-top: 1px solid #cde1ee;
+	background-color: #ecf4fa;
+	color: #61c3f5;
+	padding: 10px 0;
+	margin: 20px 0 10px 0;
+}
+
+#footer, #users {
+	text-align: center;
+}
+
+#users {
+	color: #999;
+}

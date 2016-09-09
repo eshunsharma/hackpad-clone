@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HackPad</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
+</head>
+<body>
+<div class="wrapper">
+	<div id="header">
+		HackPad Clone
+	</div>
+	<textarea id="text"></textarea>
+	<div id="footer">
+		USERS ONLINE
+	</div>
+	<div id="users">
+		Functionality not in scope
+	</div>
+</div>
+</body>
+</html>
+<script src="{{ url_for('static', filename='socket.io-client/socket.io.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
