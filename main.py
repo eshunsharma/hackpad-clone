@@ -44,7 +44,7 @@ def connect(sid, environ):
 
 @sio.on('data')
 def message(sid, data):
-	sio.emit('data', data , room=data['session'])
+	sio.emit('data', data , room=data['session'], skip_sid=sid)
 	if MONGO_UP == 1:
 		db = Mongo(0)
 		db.update(data)
