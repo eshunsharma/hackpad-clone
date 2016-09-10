@@ -1,4 +1,4 @@
-var socket = io('https://hackpad.eshunsharma.in');
+var socket = io('http://162.213.199.46:6200');
 var txtarea = document.getElementById("text");
 var sess = window.location.pathname.replace('/', '');
 
