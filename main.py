@@ -44,12 +44,12 @@ def connect(sid, environ):
 
 @sio.on('data')
 def message(sid, data):
+	sio.emit('data', data , room=data['session'])
 	if MONGO_UP == 1:
 		db = Mongo(0)
 		db.update(data)
 	else:
 		STORE[data['session']] = data
-	sio.emit('data', data , room=data['session'])
 
 @sio.on('disconnect')
 def disconnect(sid):
