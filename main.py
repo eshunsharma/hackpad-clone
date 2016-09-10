@@ -1,5 +1,6 @@
 import socketio
 import eventlet
+from eventlet import wsgi
 from flask import Flask, render_template
 from sockets import Sockets
 from mongo import Mongo
@@ -56,4 +57,4 @@ def disconnect(sid):
 
 if __name__ == '__main__':
     app = socketio.Middleware(sio, app)
-    eventlet.wsgi.server(eventlet.listen(('', 6200)), app)
+    wsgi.server(eventlet.listen(('', 6200)), app)
