@@ -11,8 +11,8 @@
 		HackPad Clone
 	</div>
 	<div class="main">
-		<h3>Enter name for your textarea</h3>
-		<input type="text" id="textbox-name"/>
+		<h3>Enter name for your hackpad</h3>
+		<input type="text" id="textbox-name" placeholder="Enter hackpad name..."/>
 		<div id="start">Start Editing</div>
 	</div>
 </div>
@@ -23,7 +23,10 @@
 var bttn = document.getElementById("start");
 
 var redir = function() {
-	window.location = document.getElementById("textbox-name").value;
+	if(document.getElementById("textbox-name").value != '' || document.getElementById("textbox-name").value != false)
+		window.location = document.getElementById("textbox-name").value;
+	else
+		alert('Please enter a proper name for your hacktab');
 }
 
 bttn.onclick = redir;
