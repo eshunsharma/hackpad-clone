@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	'''Function for root page'''
-    return render_template('index.html')
+	return render_template('index.html')
 
 
 @app.route('/<name>')
