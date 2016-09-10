@@ -12,12 +12,12 @@ class Mongo():
 		'''Initial mongo connection, if it fails local store is used'''
 
 		try:
-	    	client = MongoClient(connectTimeoutMS=3000, serverSelectionTimeoutMS=3000)
-	    	client.server_info()
-	    	Mongo.UPTIME = 1
-	    	return client.test
+			client = MongoClient(connectTimeoutMS=3000, serverSelectionTimeoutMS=3000)
+			client.server_info()
+			Mongo.UPTIME = 1
+			return client.test
 		except errors.PyMongoError:
-	    	Mongo.UPTIME = 0
+			Mongo.UPTIME = 0
 			print("Could not connect to test")
 
 
