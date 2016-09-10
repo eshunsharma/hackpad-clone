@@ -11,14 +11,14 @@ class Mongo():
 	def connect(self):
 		'''Initial mongo connection, if it fails local store is used'''
 
-	    try:
+		try:
 	    	client = MongoClient(connectTimeoutMS=3000, serverSelectionTimeoutMS=3000)
 	    	client.server_info()
 	    	Mongo.UPTIME = 1
-	        return client.test
-	    except errors.PyMongoError:
+	    	return client.test
+		except errors.PyMongoError:
 	    	Mongo.UPTIME = 0
-	        print("Could not connect to test")
+			print("Could not connect to test")
 
 
 	def insert(self, data):
@@ -46,7 +46,7 @@ class Mongo():
 
 	def find_insert(self, data):
 		'''Find a record in table, if found insert data, else return data'''
-		 
+
 		if Mongo.UPTIME == 1:
 			result = self.db.hackpad.find({"session":data["session"]}).limit(1).count()
 			if result < 1:
