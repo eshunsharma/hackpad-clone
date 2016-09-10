@@ -24,7 +24,7 @@ var bttn = document.getElementById("start");
 
 var redir = function() {
 	if(document.getElementById("textbox-name").value != '' || document.getElementById("textbox-name").value != false)
-		window.location = document.getElementById("textbox-name").value;
+		window.location = document.getElementById("textbox-name").value.replace(/ /g, '-');
 	else
 		alert('Please enter a proper name for your hacktab');
 }
