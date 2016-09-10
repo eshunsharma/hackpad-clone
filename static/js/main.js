@@ -1,4 +1,4 @@
-var socket = io('http://192.168.43.178:6200');
+var socket = io('http://162.213.199.46:6200');
 var txtarea = document.getElementById("text");
 var sess = window.location.pathname.replace('/', '');
 
